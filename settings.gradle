@@ -1,1 +1,1 @@
-include ':app', ':RPRCSimulator'
+include ':app', ':rs'

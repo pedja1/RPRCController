@@ -1,0 +1,10 @@
+apply plugin: 'java'
+
+repositories{
+	jcenter()
+	maven {url 'http://clojars.org/repo/'}
+}
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+	compile 'kryonet:kryonet:2.21'
+}
