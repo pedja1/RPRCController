@@ -4,9 +4,18 @@ import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryonet.Client;
 import com.esotericsoftware.kryonet.EndPoint;
 import com.esotericsoftware.kryonet.Server;
+import com.esotericsoftware.minlog.Log;
 
 public class KryoNet
 {
+	public static final int TCP_PORT = 6056;
+	public static final int UDP_PORT = 6057;
+	
+	static
+	{
+		Log.set(Log.LEVEL_TRACE);
+	}
+	
 	public static Server createServer()
 	{
 		Server server = new Server();
@@ -20,10 +29,12 @@ public class KryoNet
 		registerClasses(client);
 		return client;
 	}
+	
 	public static void registerClasses(EndPoint endPoint)
 	{
 		Kryo kryo = endPoint.getKryo();
-		kryo.register(KryoCommand.class);
-		//kryo.register(SomeResponse.class);
+		kryo.register(Power.class);
+		kryo.register(Status.class);
+		kryo.register(Position.class);
 	}
 }
