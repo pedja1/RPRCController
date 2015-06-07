@@ -14,6 +14,7 @@ public class KryoNet
 	static
 	{
 		Log.set(Log.LEVEL_TRACE);
+		System.setProperty("java.net.preferIPv4Stack" , "true");
 	}
 	
 	public static Server createServer()

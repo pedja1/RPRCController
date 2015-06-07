@@ -2,13 +2,15 @@ package com.androidforever.rprccommon.lib;
 
 public class Position extends KryoCommand
 {
-	public int angle, power, distance;
+	public int angle, power;
 
-	public Position(int id, boolean request, int angle, int power, int distance)
+	public Position(boolean request, int angle, int power)
 	{
-		super(id, request);
+		super(request);
 		this.angle = angle;
 		this.power = power;
-		this.distance = distance;
 	}
+
+	public Position()
+	{}
 }

@@ -4,9 +4,12 @@ public class Power extends KryoCommand
 {
 	public int power;//0-100
 
-	public Power(int id, boolean request,  int power)
+	public Power(boolean request,  int power)
 	{
-		super(id, request);
+		super(request);
 		this.power = power;
 	}
+
+	public Power()
+	{}
 }

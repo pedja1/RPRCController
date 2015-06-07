@@ -10,17 +10,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:id="@+id/tbPower"/>
+        android:id="@+id/tbPower"
+        android:enabled="false"/>
 
     <SeekBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:id="@+id/sbPower"
-        android:max="70"/>
+        android:max="100"
+        android:enabled="false"/>
 
-    <com.androidforever.rprccontroller.app.JoystickView
+    <com.androidforever.rprccontroller.app.widget.JoystickView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:id="@+id/joystick"
+        android:enabled="false"/>
 
 </LinearLayout>

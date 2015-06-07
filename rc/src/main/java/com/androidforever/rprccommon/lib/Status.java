@@ -4,9 +4,9 @@ public class Status extends KryoCommand
 {
 	public boolean power;
 
-	public Status(int id, boolean request,  boolean power)
+	public Status(boolean request,  boolean power)
 	{
-		super(id, request);
+		super(request);
 		this.power = power;
 	}
 	

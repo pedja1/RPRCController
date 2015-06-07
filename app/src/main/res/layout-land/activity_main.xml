@@ -17,19 +17,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:id="@+id/tbPower"/>
+            android:id="@+id/tbPower"
+            android:enabled="false"/>
 
-        <com.androidforever.rprccontroller.app.VerticalSeekBar
+        <com.androidforever.rprccontroller.app.widget.VerticalSeekBar
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"
             android:id="@+id/sbPower"
-            android:max="70"
-            android:layout_gravity="center_horizontal"/>
+            android:max="100"
+            android:layout_gravity="center_horizontal"
+            android:enabled="false"/>
     </LinearLayout>
 
-    <com.androidforever.rprccontroller.app.JoystickView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+    <com.androidforever.rprccontroller.app.widget.JoystickView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:id="@+id/joystick"/>
 
 </LinearLayout>
